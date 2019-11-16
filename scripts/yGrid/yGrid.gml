@@ -1,0 +1,1 @@
+with (oGrid) return -(argument0 - room_height/2)/(step*global.zoom);

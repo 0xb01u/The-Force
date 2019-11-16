@@ -1,0 +1,9 @@
+/// @description Defaults.
+text = "";
+defaultValue = 0;
+active = false;
+lastActive = false;
+line = true;
+bullet_bs_ready = false;
+bullet_bs = false;
+alarm[0] = 1;
