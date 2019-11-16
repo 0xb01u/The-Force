@@ -34,5 +34,5 @@ global.inertial = inertialOption.tick;
 global.velocity = velocityOption.tick;
 
 // Inboxes modifiers (global constants for option tweaking):
-global.massUnits = real(massUnits.text);
-global.elecUnits = real(electricUnits.text);
+global.massUnits = num(massUnits.text);
+global.elecUnits = num(electricUnits.text);

@@ -100,8 +100,8 @@ if (interactable)
 		{
 			menu = false;
 			// Deletes all the boxes (if any):
-			x = xRoom(real(xBox.text));
-			y = yRoom(real(yBox.text));
+			x = xRoom(num(xBox.text));
+			y = yRoom(num(yBox.text));
 			instance_destroy(xBox);
 			instance_destroy(yBox);
 			instance_destroy(massBox);
@@ -125,12 +125,12 @@ if (interactable)
 				// if (among all the particles) the particle is under the menu AND is not the one showing the menu...
 				interactable = false;	
 		// Reasignation of properties (based on the text shown):
-		with (massBox) other.mass = real(text);
-		with (chargeBox) other.charge = real(text);
-		with (vxBox) other.velocity_x = real(text);
-		with (vyBox) other.velocity_y = real(text);
-		with (ifxBox) other.inertial_x = real(text);
-		with (ifyBox) other.inertial_y = real(text);
+		with (massBox) other.mass = num(text);
+		with (chargeBox) other.charge = num(text);
+		with (vxBox) other.velocity_x = num(text);
+		with (vyBox) other.velocity_y = num(text);
+		with (ifxBox) other.inertial_x = num(text);
+		with (ifyBox) other.inertial_y = num(text);
 		with (GfieldBox) other.gPoint = tick;
 		with (EfieldBox) other.ePoint = tick;	
 	}
