@@ -25,9 +25,14 @@ if (mouse_check_button_released(mb_right))
 	switch (drawing)
 	{
 		case phi.particle:
-			instance_create_layer(round((mouse_x + r_x)/_step)*_step - off_x/2, round((mouse_y - r_y)/_step)*_step + off_y/2, "Particles", oParticle);
-																	// Nearest x-integer and nearest y-integer of the grid.
+			if (!particleNearby && !menuNearby)
+				instance_create_layer(
+				round((mouse_x + r_x)/_step)*_step - off_x/2,
+				round((mouse_y - r_y)/_step)*_step + off_y/2,
+				// Nearest x-integer and nearest y-integer of the grid.
+				"Particles", oParticle);
 			break;
+			
 		case phi.mField:
 			if (!fielding)
 			{
